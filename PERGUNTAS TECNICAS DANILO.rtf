@@ -1,0 +1,158 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.22621}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\b\f0\fs22\lang10 1. NET FRAMEWORK\b0\par
+\b a. What is net framework?\par
+\b0 It is a software development framework for compiling and running applications on\par
+Windows.\par
+\par
+\b b. How do you get from programming code to machine language?\par
+\b0 The programming code is compiled by CIL (Common Intermediate\par
+Language) to an intermediate language, creating assemblies (dlls)\par
+At runtime the CLR (Common language runtime) takes the assemblies and\par
+using the JIT compiler (Just in Time) converts them into machine code\par
+\par
+\b c. Multiple class inheritance can be implemented in. Net?\b0\par
+No. Net does not allow multiple inheritance.\par
+If nested inheritance can be implemented. Inheritance can also be implemented\par
+multiple interfacese.\par
+\par
+\b d. What are the differences between an abstract class and an interface?\par
+An abstract class can have implementations. Instead, a single interface\par
+has abstract methods.\par
+\b0 In an interface all methods must be public.\par
+All interface methods must be compulsorily implemented in the\par
+classes that inherit it. Instead, the methods of an abstract class are not\par
+required to be defined in the class that inherits it.\par
+\par
+\b e. When it is convenient to define an interface and when an abstract and\par
+what? Give an example.\par
+\b0 Abstract classes are often used to define model implementations with\par
+already implemented at its most general level. A clear example is\par
+have an abstract 'vehicle' class with methods like accelerating, braking and then classes\par
+you inherit it as 'car', 'motorcycle', 'truck'.\par
+Interfaces are often used when you want to extend the behavior of\par
+a class also when several classes share the same functionalities, but their\par
+implementation is very different in each case.\par
+\par
+\b f. What are the main concepts of object-oriented programming?\par
+Define them and explain with your words each.\par
+\b0 Encapsulation, abstraction, polymorphism and inheritance.\par
+\b Encapsulation\b0 : No object should be able to modify the data of another\par
+direct way. You must define what are the properties that can be\par
+directly modified and which should not and preferably be modified by\par
+means the class\rquote s own methods for accessing those properties.\par
+\b Abstraction\b0 : are models (classes) that represent a concept, usually of the\par
+real world, with relevant properties that the application will handle\par
+\b Polymorphism\b0 : is the concept of defining a method where its functionality is the\par
+itself, but the implementation of it can vary between objects.\par
+\b Inheritance\b0 : is the concept of defining properties or generic methods that are\par
+used by daughter classes..\par
+\par
+\b g. What are the SOLID principles? List them and explain with your words that\par
+refers everyone.\par
+\b0 Single Responsibility: one class should have only one responsibility.\par
+Open / Close: This principle suggests that the class should be easily extended but\par
+there is no need to change its core implementations.\par
+Liskov Sustitution: you should be able to use any derived class instead of a parent\par
+class and have it behaved in the same manner without modification". It ensures that\par
+a derived class does not affect the behavior of the parent class, in other words, that\par
+a derived class must be substitutable for its base class.\par
+Interface Segregation: that clients should not be forced to implement interfaces they\par
+don't use. Instead of one fat interface, many small interfaces are preferred based on\par
+groups of methods, each one serving one submodule.\par
+Dependency Inversion Principle: states that high-level modules/classes should not\par
+depend on low-level modules/classes. Both should depend upon abstractions.\par
+Secondly, abstractions should not depend upon details. Details should depend upon\par
+abstractions.\par
+\b h. What are design patterns? What are the types? Define at least 3\par
+\b0 patterns most used in the development of Apis.\par
+Creational, Structural, Behavioral (of creation, structure and behaviour)\par
+\b Abstract factory (creational) \b0 - allows creation of objects without specifying the\par
+concrete type.\par
+\b Adapter (Structural) \b0 - allows 2 incompatible classes works together by wrapping an\par
+interface around one of them.\par
+\b Observer (behavioural) \b0 - Define a one-to-many dependency between objects so that\par
+when one object changes state, all its dependents are notified and updated\par
+automatically.\par
+\b 2. Databases, ORM, Entity Framework, Linq\b0\par
+\b a\b0 . What are ACID principles? List and define with your words\par
+Atomicity: each transaction is atomic. Must follow all or nothing rule.\par
+Consistency: never leaves in an unfinished state\par
+Isolation: Keeps separated from others\par
+Durability: Keeps track of pending changes\par
+\par
+\b b. What is an ORM? Define and give some examples of the most used in. Net\b0\par
+An ORM is a programming model that allows mapping the structures of a\par
+relational database, on a logical structure of entities for the purpose of\par
+simplify and accelerate the development of our applications.\par
+The most used are Entity Framework and Dapper\par
+\par
+\b c. What are nonrelational databases? Define and give examples of the most\par
+used\par
+\b0 They are databases that can be adapted to a wide variety of data.\par
+It is a distributed, flexible and scalable base.\par
+They don\rquote t have a database schema.\par
+The ACID principles do not apply\par
+The most common types are, document databases, graphs, key-value pairs\par
+Some examples: MongoDB, Redis, Couchbase.\par
+\par
+\b 3. Tests & Unit Tests\par
+a. What categories/types of Test exist?\b0\par
+Unit Tests, Integration Tests, Functional Tests, End to End Tests, Regression Tests,\par
+Smoke Tests, Acceptance Tests, Performance Tests\par
+\b b. What are the phases or basic pattern of a unit test? Define and explain\b0\par
+It\rquote s usually called, patron AAA\par
+Arrange: variables or initializations are defined to prepare the test\par
+Act: is where the test itself is run\par
+Assert: is where test results are verified and conditions are placed\par
+who must comply.\par
+\b c. NUnit What is the [SetUp] attribute used for?\b0\par
+Used to define a set of methods that run just before each proof.\par
+\b d. NUnit What is the [TestCase] attribute used for?\b0\par
+It is used to pass parameters to the same test and thus have a test with several test cases.\par
+\b e. What is moq and what is it used for?\b0\par
+It is a library that allows you to create model interfaces for testing.\par
+In tests, once the Mock object of the interface is created, it is also required to define that it receives and is expected to return the methods of the interface being mocked (at least for the method being made the test)\par
+\par
+\b 4. TDD\b0\par
+\b a. What is Test Driven Development (TDD)?\b0\par
+
+\pard\sa200\sl276\slmult1\b Test-Driven Development \b0 (\b TDD\b0 ) is a software development technique that relates to the concept of verification and validation and is based on a short cycle of repetitions.\par
+First the \b developer writes an automated test case\b0  that \b defines a required improvement \b0 or new functionality. \par
+\b Create precise test / Correcting the Code / Refactor the Code\par
+\b0 (TDD)\b  is a software development practice that focuses on creating unit test cases before developing the actual code\b0 . It is an iterative approach combining programming, unit test creation, and refactoring.\par
+
+\pard\sa200\sl276\slmult1\b b.Test Driven Development (TDD) Examples\b0\par
+Calculator Function: When building a calculator function, a TDD approach would involve writing a test case for the \ldblquote add\rdblquote  function and then writing the code for the process to pass that test. Once the \ldblquote add\rdblquote  function is working correctly, additional test cases would be written for other functions such as \ldblquote subtract\rdblquote , \ldblquote multiply\rdblquote  and \ldblquote divide\rdblquote .\par
+User Authentication: When building a user authentication system, a TDD approach would involve writing a test case for the user login functionality and then writing the code for the login process to pass that test. Once the login functionality works correctly, additional test cases will be written for registration, password reset, and account verification.\par
+\par
+\b c. Three Phases of Test Driven Development\b0\par
+Create precise tests: Developers need to create exact unit tests to verify the functionality of specific features. They must ensure that the test compiles so that it can execute. In most cases, the test is bound to fail. This is a meaningful failure as developers create compact tests based on their assumptions of how the feature will behave.\par
+Correcting the Code: Once a test fails, developers must make the minimal changes required to update the code to run successfully when re-executed.\par
+Refactor the Code: Once the test runs successfully, check for redundancy or any possible code optimizations to enhance overall performance. Ensure that refactoring does not affect the external behavior of the program.\par
+\b d. what is xUnit?\par
+\b0 xUnit.net is a free and open-source unit testing tool for the .NET Framework. The software can also be used with .NET Core and [2] Mono\par
+\b e. what is Fluent Assertions ?\b0\par
+
+\pard\sa200\sl276\slmult1\b Fluent Assertions \b0 is a set of .NET extension methods that allow you to more naturally specify the expected outcome of a TDD or BDD-style unit test. This enables a simple intuitive syntax that all starts with the following using statement:\par
+using FluentAssertions;\par
+This brings a lot of extension methods into the current scope. For example, to verify that a string begins, ends and contains a particular phrase.\par
+\b Exemplo:\b0\par
+string actual = "ABCDEFGHI";\par
+actual.Should().\b StartWith\b0 ("AB").And.\b EndWith\b0 ("HI").And.\b Contain\b0 ("EF").And.\b HaveLength\b0 (9);\par
+To verify that all elements of a collection match a predicate and that it contains a specified number of elements.\par
+\b f. MOQ AND WHAT IS IT USED FOR?\b0\par
+\b It is \b0 a \b library \b0 that allows you to create \b interface mockups \b0 for \b testing\b0 .\par
+In testing, once the interface's Mock object is created, it is also\par
+
+\pard\sa200\sl276\slmult1 It is necessary to define what is received and what is expected to be returned by the methods of the interface being mapped \par
+\b > TFS\line\b0   Azure DevOps Server is a Microsoft product that provides version control, reporting, requirements management, project management, automated builds, testing, and release management capabilities. Covers the entire application lifecycle and enables DevOps capabilities\par
+  \b > GIT\line\b0   GitHub is a source code and file hosting platform with version control using Git. It allows programmers, utilities or any user registered on the platform to contribute to private and/or Open Source projects from anywhere in the world.\line\line\b > REST\par
+\b0   IS AN ARCHITECTURAL STYLE, ANY WEB SERVICE FOLLOWING REST ARCHITECTURE IS CALLED RESTFUL WEB SERVICE\par
+  \b > SOAP\par
+\b0   IS A PROTOCOL, A SET OF RULES WHICH MUST BEFOLLOWED WHILE CREATING A WEBSERVICE\par
+  \b > AUTHORIZATION AND AUTHENTICATION REST\par
+\b0   \b   .Basic authentication\line\b0 Basic authentication is an HTTP-based authentication approach and is the simplest way to secure REST APIs\par
+\b .Auth 2.0\line\b0 OAuth (specifically, OAuth 2.0) is considered a gold standard when it comes to REST API authentication, especially in enterprise scenarios involving sophisticated web and mobile applications\line\b\par
+}
+ 

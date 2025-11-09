@@ -1,0 +1,156 @@
+1. NET FRAMEWORK
+a. What is net framework?
+It is a software development framework for compiling and running applications on
+Windows.
+
+b. How do you get from programming code to machine language?
+The programming code is compiled by CIL (Common Intermediate
+Language) to an intermediate language, creating assemblies (dlls)
+At runtime the CLR (Common language runtime) takes the assemblies and
+using the JIT compiler (Just in Time) converts them into machine code
+
+c. Multiple class inheritance can be implemented in. Net?
+No. Net does not allow multiple inheritance.
+If nested inheritance can be implemented. Inheritance can also be implemented
+multiple interfacese.
+
+d. What are the differences between an abstract class and an interface?
+An abstract class can have implementations. Instead, a single interface
+has abstract methods.
+In an interface all methods must be public.
+All interface methods must be compulsorily implemented in the
+classes that inherit it. Instead, the methods of an abstract class are not
+required to be defined in the class that inherits it.
+
+e. When it is convenient to define an interface and when an abstract and
+what? Give an example.
+Abstract classes are often used to define model implementations with
+already implemented at its most general level. A clear example is
+have an abstract 'vehicle' class with methods like accelerating, braking and then classes
+you inherit it as 'car', 'motorcycle', 'truck'.
+Interfaces are often used when you want to extend the behavior of
+a class also when several classes share the same functionalities, but their
+implementation is very different in each case.
+
+f. What are the main concepts of object-oriented programming?
+Define them and explain with your words each.
+Encapsulation, abstraction, polymorphism and inheritance.
+Encapsulation: No object should be able to modify the data of another
+direct way. You must define what are the properties that can be
+directly modified and which should not and preferably be modified by
+means the class’s own methods for accessing those properties.
+Abstraction: are models (classes) that represent a concept, usually of the
+real world, with relevant properties that the application will handle
+Polymorphism: is the concept of defining a method where its functionality is the
+itself, but the implementation of it can vary between objects.
+Inheritance: is the concept of defining properties or generic methods that are
+used by daughter classes..
+
+g. What are the SOLID principles? List them and explain with your words that
+refers everyone.
+Single Responsibility: one class should have only one responsibility.
+Open / Close: This principle suggests that the class should be easily extended but
+there is no need to change its core implementations.
+Liskov Sustitution: you should be able to use any derived class instead of a parent
+class and have it behaved in the same manner without modification". It ensures that
+a derived class does not affect the behavior of the parent class, in other words, that
+a derived class must be substitutable for its base class.
+Interface Segregation: that clients should not be forced to implement interfaces they
+don't use. Instead of one fat interface, many small interfaces are preferred based on
+groups of methods, each one serving one submodule.
+Dependency Inversion Principle: states that high-level modules/classes should not
+depend on low-level modules/classes. Both should depend upon abstractions.
+Secondly, abstractions should not depend upon details. Details should depend upon
+abstractions.
+h. What are design patterns? What are the types? Define at least 3
+patterns most used in the development of Apis.
+Creational, Structural, Behavioral (of creation, structure and behaviour)
+Abstract factory (creational) - allows creation of objects without specifying the
+concrete type.
+Adapter (Structural) - allows 2 incompatible classes works together by wrapping an
+interface around one of them.
+Observer (behavioural) - Define a one-to-many dependency between objects so that
+when one object changes state, all its dependents are notified and updated
+automatically.
+2. Databases, ORM, Entity Framework, Linq
+a. What are ACID principles? List and define with your words
+Atomicity: each transaction is atomic. Must follow all or nothing rule.
+Consistency: never leaves in an unfinished state
+Isolation: Keeps separated from others
+Durability: Keeps track of pending changes
+
+b. What is an ORM? Define and give some examples of the most used in. Net
+An ORM is a programming model that allows mapping the structures of a
+relational database, on a logical structure of entities for the purpose of
+simplify and accelerate the development of our applications.
+The most used are Entity Framework and Dapper
+
+c. What are nonrelational databases? Define and give examples of the most
+used
+They are databases that can be adapted to a wide variety of data.
+It is a distributed, flexible and scalable base.
+They don’t have a database schema.
+The ACID principles do not apply
+The most common types are, document databases, graphs, key-value pairs
+Some examples: MongoDB, Redis, Couchbase.
+
+3. Tests & Unit Tests
+a. What categories/types of Test exist?
+Unit Tests, Integration Tests, Functional Tests, End to End Tests, Regression Tests,
+Smoke Tests, Acceptance Tests, Performance Tests
+b. What are the phases or basic pattern of a unit test? Define and explain
+It’s usually called, patron AAA
+Arrange: variables or initializations are defined to prepare the test
+Act: is where the test itself is run
+Assert: is where test results are verified and conditions are placed
+who must comply.
+c. NUnit What is the [SetUp] attribute used for?
+Used to define a set of methods that run just before each proof.
+d. NUnit What is the [TestCase] attribute used for?
+It is used to pass parameters to the same test and thus have a test with several test cases.
+e. What is moq and what is it used for?
+It is a library that allows you to create model interfaces for testing.
+In tests, once the Mock object of the interface is created, it is also required to define that it receives and is expected to return the methods of the interface being mocked (at least for the method being made the test)
+
+4. TDD
+a. What is Test Driven Development (TDD)?
+Test-Driven Development (TDD) is a software development technique that relates to the concept of verification and validation and is based on a short cycle of repetitions.
+First the developer writes an automated test case that defines a required improvement or new functionality. 
+Create precise test / Correcting the Code / Refactor the Code
+(TDD) is a software development practice that focuses on creating unit test cases before developing the actual code. It is an iterative approach combining programming, unit test creation, and refactoring.
+b.Test Driven Development (TDD) Examples
+Calculator Function: When building a calculator function, a TDD approach would involve writing a test case for the “add” function and then writing the code for the process to pass that test. Once the “add” function is working correctly, additional test cases would be written for other functions such as “subtract”, “multiply” and “divide”.
+User Authentication: When building a user authentication system, a TDD approach would involve writing a test case for the user login functionality and then writing the code for the login process to pass that test. Once the login functionality works correctly, additional test cases will be written for registration, password reset, and account verification.
+
+c. Three Phases of Test Driven Development
+Create precise tests: Developers need to create exact unit tests to verify the functionality of specific features. They must ensure that the test compiles so that it can execute. In most cases, the test is bound to fail. This is a meaningful failure as developers create compact tests based on their assumptions of how the feature will behave.
+Correcting the Code: Once a test fails, developers must make the minimal changes required to update the code to run successfully when re-executed.
+Refactor the Code: Once the test runs successfully, check for redundancy or any possible code optimizations to enhance overall performance. Ensure that refactoring does not affect the external behavior of the program.
+d. what is xUnit?
+xUnit.net is a free and open-source unit testing tool for the .NET Framework. The software can also be used with .NET Core and [2] Mono
+e. what is Fluent Assertions ?
+Fluent Assertions is a set of .NET extension methods that allow you to more naturally specify the expected outcome of a TDD or BDD-style unit test. This enables a simple intuitive syntax that all starts with the following using statement:
+using FluentAssertions;
+This brings a lot of extension methods into the current scope. For example, to verify that a string begins, ends and contains a particular phrase.
+Exemplo:
+string actual = "ABCDEFGHI";
+actual.Should().StartWith("AB").And.EndWith("HI").And.Contain("EF").And.HaveLength(9);
+To verify that all elements of a collection match a predicate and that it contains a specified number of elements.
+f. MOQ AND WHAT IS IT USED FOR?
+It is a library that allows you to create interface mockups for testing.
+In testing, once the interface's Mock object is created, it is also
+It is necessary to define what is received and what is expected to be returned by the methods of the interface being mapped 
+> TFS
+  Azure DevOps Server is a Microsoft product that provides version control, reporting, requirements management, project management, automated builds, testing, and release management capabilities. Covers the entire application lifecycle and enables DevOps capabilities
+  > GIT
+  GitHub is a source code and file hosting platform with version control using Git. It allows programmers, utilities or any user registered on the platform to contribute to private and/or Open Source projects from anywhere in the world.
+
+> REST
+  IS AN ARCHITECTURAL STYLE, ANY WEB SERVICE FOLLOWING REST ARCHITECTURE IS CALLED RESTFUL WEB SERVICE
+  > SOAP
+  IS A PROTOCOL, A SET OF RULES WHICH MUST BEFOLLOWED WHILE CREATING A WEBSERVICE
+  > AUTHORIZATION AND AUTHENTICATION REST
+    .Basic authentication
+Basic authentication is an HTTP-based authentication approach and is the simplest way to secure REST APIs
+.Auth 2.0
+OAuth (specifically, OAuth 2.0) is considered a gold standard when it comes to REST API authentication, especially in enterprise scenarios involving sophisticated web and mobile applications
